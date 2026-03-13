@@ -1,35 +1,20 @@
-# ── Build Stage ──
-FROM golang:1.23-alpine AS builder
-
-RUN apk add --no-cache git
-
-WORKDIR /usr/src/app
-
-# Install Air for hot-reload
-RUN go install github.com/air-verse/air@latest
-
-# Copy go mod files first for better caching
-COPY go.mod go.sum* ./
-RUN go mod download
-
-# Copy source code
-COPY . .
-
-RUN go mod tidy
-
-# ── Development Stage ──
 FROM golang:1.23-alpine
 
 RUN apk add --no-cache git
 
 WORKDIR /usr/src/app
 
-# Copy Air binary from builder
-COPY --from=builder /go/bin/air /go/bin/air
+# Install Air for hot-reload
+RUN go install github.com/air-verse/air@v1.61.6
+
+# Copy go mod files and download dependencies
+COPY go.mod go.sum* ./
+RUN go mod download 2>/dev/null || true
 
 # Copy source code
 COPY . .
 
+# Download all dependencies and generate go.sum
 RUN go mod tidy
 
 EXPOSE 3000

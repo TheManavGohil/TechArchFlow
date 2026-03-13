@@ -38,6 +38,7 @@ services:
         condition: service_healthy
     volumes:
       - ./backend:/usr/src/app
+    entrypoint: ["sh", "-c", "go mod tidy && air -c .air.toml"]
 
   # ── Django Admin ──
   db_admin:
