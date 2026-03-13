@@ -1,5 +1,5 @@
 {
-  "name": "create-techarchflow",
+  "name": "create-techarchflow-manav",
   "version": "1.0.0",
   "description": "Scaffold a production-ready, containerized full-stack project with Go + Django Admin + SvelteKit + PostgreSQL",
   "bin": {

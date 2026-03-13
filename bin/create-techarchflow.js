@@ -155,7 +155,7 @@ async function main() {
     `${c.bold}${c.magenta}  ╔══════════════════════════════════════════╗${c.reset}`
   );
   log(
-    `${c.bold}${c.magenta}  ║       🚀 create-techarchflow             ║${c.reset}`
+    `${c.bold}${c.magenta}  ║       🚀 create-techarchflow-manav       ║${c.reset}`
   );
   log(
     `${c.bold}${c.magenta}  ║  Go · Django Admin · SvelteKit · Postgres ║${c.reset}`

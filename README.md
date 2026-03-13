@@ -1,4 +1,4 @@
-# 🚀 create-techarchflow
+# 🚀 create-techarchflow-manav
 
 Scaffold a **production-ready, fully containerized** full-stack project in seconds.
 
@@ -15,7 +15,7 @@ Scaffold a **production-ready, fully containerized** full-stack project in secon
 ## Quick Start
 
 ```bash
-npx create-techarchflow my-app
+npx create-techarchflow-manav my-app
 cd my-app
 docker compose up --build
 ```
