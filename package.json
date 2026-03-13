@@ -1,0 +1,34 @@
+{
+  "name": "create-techarchflow",
+  "version": "1.0.0",
+  "description": "Scaffold a production-ready, containerized full-stack project with Go + Django Admin + SvelteKit + PostgreSQL",
+  "bin": {
+    "create-techarchflow": "bin/create-techarchflow.js"
+  },
+  "keywords": [
+    "cli",
+    "scaffold",
+    "boilerplate",
+    "fullstack",
+    "go",
+    "django",
+    "sveltekit",
+    "postgresql",
+    "docker",
+    "template"
+  ],
+  "author": "TheManavGohil",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TheManavGohil/TechArchFlow"
+  },
+  "files": [
+    "bin/",
+    "template/",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
