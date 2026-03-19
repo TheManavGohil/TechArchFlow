@@ -4,41 +4,28 @@
 	let { children } = $props();
 </script>
 
-<div class="min-h-screen bg-base-200">
-	<!-- Navbar -->
-	<div class="navbar bg-base-100 shadow-lg">
-		<div class="flex-1">
-			<a href="/" class="btn btn-ghost text-xl font-bold">
-				🚀 {{PROJECT_NAME}}
+<div class="min-h-screen flex flex-col bg-white text-gray-900">
+	<nav class="border-b border-gray-200">
+		<div class="max-w-4xl mx-auto px-6 h-14 flex items-center justify-between">
+			<a href="/" class="font-semibold tracking-tight text-base hover:opacity-70 transition-opacity">
+				{{PROJECT_NAME}}
 			</a>
+			<div class="flex items-center gap-6 text-sm text-gray-500">
+				<a href="/" class="hover:text-gray-900 transition-colors">Home</a>
+				<a href="/items" class="hover:text-gray-900 transition-colors">Items</a>
+				<a href="http://localhost:8000/admin" target="_blank" rel="noopener"
+					class="hover:text-gray-900 transition-colors">Admin</a>
+				<a href="http://localhost:3000/api/health" target="_blank" rel="noopener"
+					class="hover:text-gray-900 transition-colors">API</a>
+			</div>
 		</div>
-		<div class="flex-none">
-			<ul class="menu menu-horizontal px-1">
-				<li><a href="/">Home</a></li>
-				<li><a href="/items">Items</a></li>
-				<li>
-					<a href="http://localhost:8000/admin" target="_blank" rel="noopener">
-						Django Admin ↗
-					</a>
-				</li>
-				<li>
-					<a href="http://localhost:3000/api/health" target="_blank" rel="noopener">
-						API Health ↗
-					</a>
-				</li>
-			</ul>
-		</div>
-	</div>
+	</nav>
 
-	<!-- Page Content -->
-	<main class="container mx-auto p-6">
+	<main class="flex-1 max-w-4xl mx-auto w-full px-6 py-10">
 		{@render children()}
 	</main>
 
-	<!-- Footer -->
-	<footer class="footer footer-center p-4 bg-base-300 text-base-content mt-auto">
-		<aside>
-			<p>Built with ❤️ using <strong>TechArchFlow</strong> — Go · Django Admin · SvelteKit · PostgreSQL</p>
-		</aside>
+	<footer class="border-t border-gray-100 py-6 text-center text-xs text-gray-400">
+		TechArchFlow &mdash; Go · Django Admin · SvelteKit · PostgreSQL
 	</footer>
 </div>
